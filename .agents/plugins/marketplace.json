@@ -1,0 +1,12 @@
+{
+  "name": "mitchell-correa-skills",
+  "interface": {"displayName": "Mitchell Correa / Cyberwolf AI Skills"},
+  "plugins": [
+    {
+      "name": "b2b-prospecting-sales-os",
+      "source": {"source": "local", "path": "./b2b-prospecting-sales-os"},
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Productivity"
+    }
+  ]
+}
