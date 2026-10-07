@@ -63,7 +63,20 @@ Before delivery verify:
 7. no raw Markdown;
 8. no clipping, overlap, broken tables, orphaned headings or unreadable page breaks.
 
+`scripts/validate_handoff_visual.py report.docx` checks a structural subset:
+explicit required style font/size/color, title/heading formatting overrides,
+page geometry and active header/footer variants in every section, and table
+header fills. Missing required values fail. Keep the mandated properties explicit
+in the named styles; do not rely on application defaults.
+
+Its `PASS: VISUAL_STRUCTURE_CHECK` is NOT `VISUAL_SYSTEM_GATE PASS`.
+It does not prove cover/content completeness, all typography, table banding,
+borders, clipping, pagination or other rendered layout requirements above.
+Full `VISUAL_SYSTEM_GATE PASS` requires both structural checks and a recorded
+visual inspection of every rendered page against all eight criteria.
+
 If the host can render DOCX, visually inspect every page.
-If rendering is unavailable, apply the system deterministically and report that visual inspection was not performed; never fake visual QA.
+If rendering is unavailable, apply the system deterministically and report that visual inspection was not performed; never fake visual QA. Keep `VISUAL_SYSTEM_GATE` pending (not PASS) until every page is inspected.
 
 Content Quality PASS does not override VISUAL_SYSTEM_GATE FAIL.
+

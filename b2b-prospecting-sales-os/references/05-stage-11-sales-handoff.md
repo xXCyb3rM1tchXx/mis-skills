@@ -75,6 +75,8 @@ Q. Sales Handoff Final: concise execution summary, never a replacement for the B
 - VISUAL_SYSTEM_GATE
 - Rendering/style gate
 
+The visual validator proves only VISUAL_STRUCTURE_CHECK. It cannot approve VISUAL_SYSTEM_GATE. Render and inspect every page before full visual PASS; if unavailable, report VISUAL_INSPECTION_PENDING and do not declare SALES_HANDOFF_COMPLETE.
+
 BENCHMARK_PARITY_TEST passes only if:
 1. account-specific intelligence is developed, not merely recapped;
 2. material signals retain evidence + limits + inference;
@@ -89,3 +91,4 @@ ETAPA_8_DOSSIER_ANALYZED: TRUE
 BENCHMARK_PARITY_TEST: PASS
 VISUAL_SYSTEM_GATE: PASS
 SALES_HANDOFF_COMPLETE
+

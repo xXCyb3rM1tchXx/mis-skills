@@ -29,4 +29,5 @@ Host-neutral business logic.
 - Archive/tracking: Drive/Sheets when authorized, otherwise manual.
 
 ChatGPT Work: use installed plugins/connectors. Tool visibility ≠ account connected ≠ plan authorized ≠ cost confirmed.
-Claude Cowork: use available connectors/MCPs with same gates. If a required connector is absent, stop at PRECHECK.
+Claude Cowork: use available connectors/MCPs with same gates. If a connector is absent, apply the current-stage PRECHECK and documented fallback; defer later-stage gaps.
+

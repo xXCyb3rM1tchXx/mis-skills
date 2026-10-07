@@ -39,3 +39,7 @@ For multi-account work, the Campaign Orchestrator owns the Credit Ledger.
 Batch approval is valid only when the user explicitly names accounts/contacts/fields and maximum total credits.
 
 Silence, “continue”, or general campaign approval is never spend approval.
+
+
+## Structural preflight
+Before a paid start or polling operation, build the state/authorization record described in `references/11-workflow-validation.md` and run `scripts/validate_workflow_state.py`. Independently check the actual human approval, current ledger and provider cost semantics; a JSON boolean or script PASS is never authorization. Reserve/mark the authorization consumed in the campaign ledger before starting the provider job, including when the response is uncertain. Reconcile the same job rather than retrying a new one. Validate completion claims with the same state contract and inspect their referenced evidence.

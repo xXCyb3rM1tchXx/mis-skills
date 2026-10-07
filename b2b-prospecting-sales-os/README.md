@@ -1,6 +1,6 @@
 # B2B Prospecting Sales OS
 
-**Version:** 0.9.1 RC  
+**Version:** 0.9.2 RC  
 **Author:** Mitchell Correa / Cyberwolf AI  
 **SOP completo:** https://app.notion.com/p/3e9b9257f11881da8dee-fa2b3fd080c2?pvs=204
 
@@ -213,7 +213,7 @@ b2b-prospecting-sales-os/
 
 ## Estado
 
-**v0.9.1 Release Candidate**
+**v0.9.2 Release Candidate**
 
 La promoción a **v1.0.0** debe realizarse después de validar instalación y ejecución end-to-end en ChatGPT Work y Claude Cowork.
 
@@ -221,3 +221,16 @@ La promoción a **v1.0.0** debe realizarse después de validar instalación y ej
 
 **Mitchell Correa / Cyberwolf AI**  
 B2B Sales Operations · AI Automation · Commercial Intelligence
+
+
+## Instalación y validación (v0.9.2 RC)
+
+La skill reutiliza los conectores/MCP que ya estén conectados en cada cuenta. No incluye credenciales ni instala servicios automáticamente. PRECHECK bloquea sólo la etapa actual cuando falta una capacidad sin alternativa documentada.
+
+En ChatGPT Work, instalar como skill personal. En Claude, importar esta carpeta como skill personalizada o utilizar el manifiesto del plugin; la instalación y activación de cada plataforma son independientes. El manifiesto Claude declara explícitamente la skill de la raíz.
+
+Validadores locales:
+- `python scripts/validate_workflow_state.py state.json`: contrato y ejemplos en `references/11-workflow-validation.md`. No ejecuta ni autoriza operaciones del proveedor.
+- `python scripts/validate_handoff_visual.py report.docx`: necesita `python-docx`; sólo valida propiedades estructurales. La revisión de páginas renderizadas es obligatoria antes de declarar el gate visual completo.
+
+Los valores de referencia MAS de la etapa 10 se conservan sin cambios.

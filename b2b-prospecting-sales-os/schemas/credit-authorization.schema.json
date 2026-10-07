@@ -2,17 +2,82 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "CreditAuthorization",
   "type": "object",
-  "required": ["provider","operation","active_account","contacts","fields","max_credits","single_use","approved_by_human"],
+  "required": [
+    "provider",
+    "operation",
+    "active_account",
+    "contacts",
+    "fields",
+    "max_credits",
+    "single_use",
+    "approved_by_human",
+    "authorization_id",
+    "approval_reference",
+    "consumed",
+    "consumed_credits"
+  ],
   "properties": {
-    "provider": {"type":"string"},
-    "operation": {"type":"string"},
-    "active_account": {"type":"string"},
-    "contacts": {"type":"array","minItems":1,"items":{"type":"string"}},
-    "fields": {"type":"array","minItems":1,"items":{"type":"string"}},
-    "max_credits": {"type":"number","minimum":0},
-    "single_use": {"const":true},
-    "approved_by_human": {"const":true},
-    "job_id": {"type":["string","null"]}
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "active_account": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "max_credits": {
+      "type": "number",
+      "minimum": 0
+    },
+    "single_use": {
+      "const": true
+    },
+    "approved_by_human": {
+      "const": true
+    },
+    "job_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authorization_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumed": {
+      "type": "boolean"
+    },
+    "consumed_credits": {
+      "type": "number",
+      "minimum": 0
+    }
   },
   "additionalProperties": true
 }

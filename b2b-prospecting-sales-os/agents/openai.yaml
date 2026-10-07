@@ -1,0 +1,4 @@
+interface:
+  display_name: "B2B Prospecting Sales OS"
+  short_description: "Prospección B2B con control de créditos y evidencia"
+  default_prompt: "Usa $b2b-prospecting-sales-os para iniciar o continuar una campaña B2B con control por etapas."

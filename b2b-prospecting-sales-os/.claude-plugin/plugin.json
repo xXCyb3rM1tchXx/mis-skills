@@ -1,6 +1,11 @@
 {
   "name": "b2b-prospecting-sales-os",
   "description": "Auditable B2B prospecting workflow with human spend gates, multi-account isolation, Gemini fallback, and sales handoff.",
-  "version": "0.9.1",
-  "author": {"name": "Mitchell Correa/Cyberwolf AI"}
+  "version": "0.9.2",
+  "author": {
+    "name": "Mitchell Correa/Cyberwolf AI"
+  },
+  "skills": [
+    "."
+  ]
 }

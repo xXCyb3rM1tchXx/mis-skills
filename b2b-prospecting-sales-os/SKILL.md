@@ -6,7 +6,7 @@ description: Run auditable B2B prospecting from campaign brief through account i
 # B2B Prospecting Sales OS
 
 Author: Mitchell Correa/Cyberwolf AI
-Version: 0.9.1 RC
+Version: 0.9.2 RC
 
 Use this skill when the user asks to run, continue, audit, troubleshoot, or scale the validated B2B prospecting workflow.
 
@@ -41,14 +41,15 @@ Load when relevant:
 - references/07-credit-controls.md
 - references/08-multi-agent.md
 - references/10-failure-recovery-privacy-platform.md
+- references/11-workflow-validation.md when validating machine-readable state, completion evidence or credit authorization.
 
 ## First response behavior
 
 For a new campaign:
 1. Run PRECHECK 0 without Deep Research or paid operations.
 2. Report readiness for account discovery, identity/email enrichment, public web/browser, Stage 8 Deep Research, editable document creation, archive/tracker capability, and GHL manual status.
-3. If required capability is missing, return SOP_BLOCKED_BY_TOOLS and ask only for the missing capability.
-4. If ready, begin Stage 0 empty and ask only minimum Campaign Brief inputs.
+3. Block only if a capability required by the CURRENT stage has no documented usable fallback. Report later-stage gaps as DEFERRED, not global blockers. Follow the stage-specific PRECHECK in references/00-operating-contract.md.
+4. Stage 0 needs only user inputs: begin it even when later-stage connectors are missing. Ask only minimum Campaign Brief inputs. Reuse connected tools; never install or reconnect MCPs automatically.
 
 For a continuation:
 1. Validate Campaign/Account Handoff and current stage.
@@ -66,3 +67,4 @@ For a continuation:
 - Contact prospects or execute follow-ups.
 - Populate unknown CRM fields to make a record look complete.
 - Convert hiring, footprint, title, seniority, reviews, or public silence into unsupported business facts.
+
