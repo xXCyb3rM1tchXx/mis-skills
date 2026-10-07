@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "b2b-prospecting-sales-os",
+  "version": "0.9.1",
+  "description": "Auditable B2B prospecting with hard spend gates, multi-account orchestration, Gemini fallback, CRM handoff, and benchmarked sales intelligence.",
+  "author": {"name": "Mitchell Correa/Cyberwolf AI"},
+  "keywords": ["sales","prospecting","account-intelligence","crm","b2b","research"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "B2B Prospecting Sales OS",
+        "shortDescription": "Controlled prospecting with human spend gates and account intelligence.",
+        "developerName": "Mitchell Correa/Cyberwolf AI",
+        "category": "Productivity",
+        "capabilities": ["Read","Create files"],
+        "defaultPrompt": [
+          "Start a new B2B prospecting campaign using the Sales OS.",
+          "Continue this account from the provided account handoff and current stage.",
+          "Audit this Prospect Intelligence Book against Stage 11 content and visual gates."
+        ]
+      }
+    }
+  }
+}
